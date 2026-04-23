@@ -1,9 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './Admin.css';
 
 const API_URL = 'https://mi-tienda-ropa-1.onrender.com';
 
 export default function Admin() {
+  const navigate = useNavigate();
+  if (!localStorage.getItem('isAdmin')) { navigate('/login'); return null; }
+  const navigate = useNavigate();
+  const isAdmin = localStorage.getItem('isAdmin');
+  if (!isAdmin) { navigate('/login'); return null; }
   const [products, setProducts] = useState([]);
   const [form, setForm] = useState({ nombre: '', precio: '', categoria: 'Camisetas', descripcion: '', tallas: 'S,M,L,XL', stock: '', destacado: false });
   const [imageFile, setImageFile] = useState(null);
@@ -118,3 +124,6 @@ export default function Admin() {
     </main>
   );
 }
+
+
+
