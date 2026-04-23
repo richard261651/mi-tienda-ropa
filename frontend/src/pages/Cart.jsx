@@ -52,8 +52,7 @@ export default function Cart() {
               <div className="cart-page__summary-row"><span>Subtotal</span><span>{formatPrice(getTotal())}</span></div>
               <div className="cart-page__summary-row"><span>Envío</span><span>Gratis</span></div>
               <div className="cart-page__summary-total"><span>Total</span><span>{formatPrice(getTotal())}</span></div>
-              <button className="btn btn-primary" style={{ width: '100%' }}>Proceder al Pago</button>
-              <button className="btn btn-ghost" onClick={clearCart} style={{ width: '100%' }}>Vaciar Carrito</button>
+              <Link to="/checkout" className="btn btn-primary" style={{ width: '100%' }}>Proceder al Pago</Link>              <button className="btn btn-ghost" onClick={clearCart} style={{ width: '100%' }}>Vaciar Carrito</button>
             </div>
           </div>
         )}

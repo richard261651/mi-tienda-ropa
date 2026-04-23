@@ -1,0 +1,12 @@
+﻿.checkout-page { min-height: 100vh; }
+.checkout-box { max-width: 600px; margin: 0 auto; background: var(--color-bg-card); border-radius: 16px; padding: 2rem; }
+.checkout-box h2 { margin-bottom: 1.5rem; color: var(--color-text-primary); }
+.checkout-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+.checkout-list li { display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary); }
+.checkout-total { display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 700; padding: 1rem 0; color: var(--color-text-primary); border-top: 2px solid var(--color-accent); margin-bottom: 2rem; }
+.checkout-methods h3 { margin-bottom: 1rem; color: var(--color-text-primary); }
+.btn-pago { display: block; text-align: center; padding: 1rem; border-radius: 12px; font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; text-decoration: none; transition: opacity 0.2s; }
+.btn-pago:hover { opacity: 0.85; }
+.btn-nequi { background: #6C2DC7; color: white; }
+.btn-whatsapp { background: #25D366; color: white; }
+.checkout-note { text-align: center; color: var(--color-text-secondary); font-size: 0.9rem; margin-top: 1.5rem; line-height: 1.5; }
