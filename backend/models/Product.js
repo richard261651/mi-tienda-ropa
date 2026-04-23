@@ -1,4 +1,4 @@
-﻿const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
   nombre: { type: String, required: true },
@@ -48,7 +48,6 @@ async function update(id, productData) {
     ...(productData.categoria && { categoria: productData.categoria }),
     ...(productData.imagen && { imagen: productData.imagen }),
     ...(productData.destacado !== undefined && { destacado: produc
-Veo que actualmente usa archivos JSON para guardar productos. Vamos a reemplazarlo con MongoDB. Ejecuta esto:
 
 ```powershell
 @'
