@@ -10,7 +10,6 @@ import Cart from './pages/Cart';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
 import Checkout from './pages/Checkout';
-import Checkout from './pages/Checkout';
 import './App.css';
 
 export default function App() {
@@ -21,13 +20,11 @@ export default function App() {
         <CartSidebar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/checkout" element={<Checkout />} />
           <Route path="/catalogo" element={<Catalog />} />
           <Route path="/nosotros" element={<About />} />
           <Route path="/carrito" element={<Cart />} />
           <Route path="/contacto" element={<Contact />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/admin" element={<Admin />} /><Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </CartProvider>
