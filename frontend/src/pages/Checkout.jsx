@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Checkout.css';
 
 export default function Checkout() {
-  const { cart, getTotal, clearCart } = useCart();
+  const { cart, getTotal } = useCart();
   const navigate = useNavigate();
   const total = getTotal();
   const formatPrice = (p) => new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0 }).format(p);
@@ -11,7 +11,7 @@ export default function Checkout() {
   const resumen = cart.map(i => `${i.cantidad}x ${i.nombre} (${i.talla})`).join(', ');
   const mensaje = encodeURIComponent(`Hola! Quiero pagar mi pedido NUXELIT:\n${resumen}\nTotal: ${formatPrice(total)}`);
   const whatsappLink = `https://wa.me/573147535514?text=${mensaje}`;
-  const nequiLink = `https://nequi.com.co/transferencia/?cuenta=3147535514&valor=${total}`;
+  const wompiLink = 'https://checkout.wompi.co/l/test_VPOS_fwsA1Q';
 
   return (
     <main className="checkout-page">
@@ -34,15 +34,15 @@ export default function Checkout() {
             <span>{formatPrice(total)}</span>
           </div>
           <div className="checkout-methods">
-            <h3>Elige cómo pagar</h3>
-            <a href={nequiLink} target="_blank" rel="noreferrer" className="btn-pago btn-nequi">
-              📱 Pagar con Nequi
+            <h3>Elige como pagar</h3>
+            <a href={wompiLink} target="_blank" rel="noreferrer" className="btn-pago btn-nequi">
+              Pagar con Wompi
             </a>
             <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn-pago btn-whatsapp">
-              💬 Confirmar por WhatsApp
+              Confirmar por WhatsApp
             </a>
           </div>
-          <p className="checkout-note">Después de pagar por Nequi, envíanos el comprobante por WhatsApp para confirmar tu pedido. 🙌</p>
+          <p className="checkout-note">Despues de pagar por Wompi, envianos el comprobante por WhatsApp para confirmar tu pedido.</p>
         </div>
       </div></section>
     </main>
