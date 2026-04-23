@@ -6,8 +6,6 @@ const API_URL = 'https://mi-tienda-ropa-1.onrender.com';
 
 export default function Admin() {
   const navigate = useNavigate();
-  if (!localStorage.getItem('isAdmin')) { navigate('/login'); return null; }
-  const navigate = useNavigate();
   const isAdmin = localStorage.getItem('isAdmin');
   if (!isAdmin) { navigate('/login'); return null; }
   const [products, setProducts] = useState([]);
@@ -124,6 +122,7 @@ export default function Admin() {
     </main>
   );
 }
+
 
 
 
