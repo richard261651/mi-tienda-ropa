@@ -1,50 +1,33 @@
-const fs = require('fs');
-const path = require('path');
+﻿const mongoose = require('mongoose');
 
-const DATA_FILE = path.join(__dirname, '..', 'data', 'products.json');
+const productSchema = new mongoose.Schema({
+  nombre: { type: String, required: true },
+  descripcion: { type: String, default: '' },
+  precio: { type: Number, default: 0 },
+  categoria: { type: String, default: 'General' },
+  imagen: { type: String, default: '' },
+  destacado: { type: Boolean, default: false },
+  tallas: { type: [String], default: ['M'] },
+  stock: { type: Number, default: 0 }
+}, { timestamps: true });
 
-// Helper to read products from JSON file
-function readProducts() {
-  try {
-    const data = fs.readFileSync(DATA_FILE, 'utf-8');
-    return JSON.parse(data);
-  } catch (err) {
-    return [];
-  }
+const Product = mongoose.model('Product', productSchema);
+
+async function getAll(categoria) {
+  if (categoria) return Product.find({ categoria: new RegExp(categoria, 'i') });
+  return Product.find();
 }
 
-// Helper to write products to JSON file
-function writeProducts(products) {
-  fs.writeFileSync(DATA_FILE, JSON.stringify(products, null, 2), 'utf-8');
+async function getFeatured() {
+  return Product.find({ destacado: true });
 }
 
-// Get all products, optionally filtered by category
-function getAll(categoria) {
-  const products = readProducts();
-  if (categoria) {
-    return products.filter(p => p.categoria.toLowerCase() === categoria.toLowerCase());
-  }
-  return products;
+async function getById(id) {
+  return Product.findById(id);
 }
 
-// Get featured products
-function getFeatured() {
-  const products = readProducts();
-  return products.filter(p => p.destacado === true);
-}
-
-// Get a single product by ID
-function getById(id) {
-  const products = readProducts();
-  return products.find(p => p.id === id) || null;
-}
-
-// Create a new product
-function create(productData) {
-  const products = readProducts();
-  const newId = String(Date.now());
-  const newProduct = {
-    id: newId,
+async function create(productData) {
+  const product = new Product({
     nombre: productData.nombre || 'Sin nombre',
     descripcion: productData.descripcion || '',
     precio: Number(productData.precio) || 0,
@@ -53,44 +36,80 @@ function create(productData) {
     destacado: productData.destacado === 'true' || productData.destacado === true,
     tallas: productData.tallas ? JSON.parse(productData.tallas) : ['M'],
     stock: Number(productData.stock) || 0
-  };
-  products.push(newProduct);
-  writeProducts(products);
-  return newProduct;
+  });
+  return product.save();
 }
 
-// Update an existing product
-function update(id, productData) {
-  const products = readProducts();
-  const index = products.findIndex(p => p.id === id);
-  if (index === -1) return null;
+async function update(id, productData) {
+  return Product.findByIdAndUpdate(id, {
+    ...(productData.nombre && { nombre: productData.nombre }),
+    ...(productData.descripcion && { descripcion: productData.descripcion }),
+    ...(productData.precio && { precio: Number(productData.precio) }),
+    ...(productData.categoria && { categoria: productData.categoria }),
+    ...(productData.imagen && { imagen: productData.imagen }),
+    ...(productData.destacado !== undefined && { destacado: produc
+Veo que actualmente usa archivos JSON para guardar productos. Vamos a reemplazarlo con MongoDB. Ejecuta esto:
 
-  const existing = products[index];
-  products[index] = {
-    ...existing,
-    nombre: productData.nombre || existing.nombre,
-    descripcion: productData.descripcion || existing.descripcion,
-    precio: productData.precio ? Number(productData.precio) : existing.precio,
-    categoria: productData.categoria || existing.categoria,
-    imagen: productData.imagen || existing.imagen,
-    destacado: productData.destacado !== undefined
-      ? (productData.destacado === 'true' || productData.destacado === true)
-      : existing.destacado,
-    tallas: productData.tallas ? JSON.parse(productData.tallas) : existing.tallas,
-    stock: productData.stock ? Number(productData.stock) : existing.stock
-  };
-  writeProducts(products);
-  return products[index];
+```powershell
+@'
+const mongoose = require('mongoose');
+
+const productSchema = new mongoose.Schema({
+  nombre: { type: String, required: true },
+  descripcion: { type: String, default: '' },
+  precio: { type: Number, default: 0 },
+  categoria: { type: String, default: 'General' },
+  imagen: { type: String, default: '' },
+  destacado: { type: Boolean, default: false },
+  tallas: { type: [String], default: ['M'] },
+  stock: { type: Number, default: 0 }
+}, { timestamps: true });
+
+const Product = mongoose.model('Product', productSchema);
+
+async function getAll(categoria) {
+  if (categoria) return Product.find({ categoria: new RegExp(categoria, 'i') });
+  return Product.find();
 }
 
-// Delete a product
-function remove(id) {
-  const products = readProducts();
-  const index = products.findIndex(p => p.id === id);
-  if (index === -1) return false;
-  products.splice(index, 1);
-  writeProducts(products);
-  return true;
+async function getFeatured() {
+  return Product.find({ destacado: true });
+}
+
+async function getById(id) {
+  return Product.findById(id);
+}
+
+async function create(productData) {
+  const product = new Product({
+    nombre: productData.nombre || 'Sin nombre',
+    descripcion: productData.descripcion || '',
+    precio: Number(productData.precio) || 0,
+    categoria: productData.categoria || 'General',
+    imagen: productData.imagen || '',
+    destacado: productData.destacado === 'true' || productData.destacado === true,
+    tallas: productData.tallas ? JSON.parse(productData.tallas) : ['M'],
+    stock: Number(productData.stock) || 0
+  });
+  return product.save();
+}
+
+async function update(id, productData) {
+  return Product.findByIdAndUpdate(id, {
+    ...(productData.nombre && { nombre: productData.nombre }),
+    ...(productData.descripcion && { descripcion: productData.descripcion }),
+    ...(productData.precio && { precio: Number(productData.precio) }),
+    ...(productData.categoria && { categoria: productData.categoria }),
+    ...(productData.imagen && { imagen: productData.imagen }),
+    ...(productData.destacado !== undefined && { destacado: productData.destacado === 'true' || productData.destacado === true }),
+    ...(productData.tallas && { tallas: JSON.parse(productData.tallas) }),
+    ...(productData.stock && { stock: Number(productData.stock) })
+  }, { new: true });
+}
+
+async function remove(id) {
+  const result = await Product.findByIdAndDelete(id);
+  return !!result;
 }
 
 module.exports = { getAll, getFeatured, getById, create, update, remove };
