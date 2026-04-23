@@ -58,7 +58,7 @@ export default function CartSidebar() {
                 <span>Total</span>
                 <span className="cart-sidebar__total-price">{formatPrice(getTotal())}</span>
               </div>
-              <button className="btn btn-primary cart-sidebar__checkout">Proceder al Pago</button>
+              <button className="btn btn-primary cart-sidebar__checkout" onClick={() => { setIsCartOpen(false); navigate("/checkout"); }}>Proceder al Pago</button>
               <button className="btn btn-ghost" onClick={clearCart}>Vaciar Carrito</button>
             </div>
           </>
@@ -67,3 +67,4 @@ export default function CartSidebar() {
     </>
   );
 }
+
