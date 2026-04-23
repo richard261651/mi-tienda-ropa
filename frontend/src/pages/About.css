@@ -1,0 +1,13 @@
+.about-page { padding-top: var(--nav-height); }
+.about-hero { padding: 48px 0 0; text-align: center; }
+.about-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-accent); font-weight: 600; margin-bottom: 12px; }
+.about-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.about-card { padding: 32px 24px; background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); transition: all var(--transition-base); }
+.about-card:hover { border-color: var(--color-accent); transform: translateY(-4px); box-shadow: var(--shadow-glow); }
+.about-icon { font-size: 2rem; display: block; margin-bottom: 16px; }
+.about-card h3 { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+.about-card p { font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6; }
+.about-mission { background: var(--color-bg-secondary); }
+.about-mission__inner { max-width: 640px; margin: 0 auto; text-align: center; }
+.about-mission__inner h2 { font-family: var(--font-heading); font-size: 2rem; font-weight: 800; margin-bottom: 16px; }
+.about-mission__inner p { font-size: 1.05rem; color: var(--color-text-secondary); line-height: 1.8; }

@@ -1,0 +1,11 @@
+.catalog-page { padding-top: var(--nav-height); }
+.catalog-hero { padding: 48px 0 0; text-align: center; }
+.catalog-filters { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 24px; }
+.catalog-categories { display: flex; gap: 8px; flex-wrap: wrap; }
+.cat-btn { padding: 8px 18px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; border-radius: var(--radius-full); border: 1px solid var(--color-border); color: var(--color-text-secondary); transition: all var(--transition-fast); }
+.cat-btn:hover, .cat-btn.active { border-color: var(--color-accent); color: var(--color-accent); background: rgba(201,169,110,0.1); }
+.catalog-search { padding: 10px 16px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: var(--color-text); font-size: 0.85rem; width: 240px; transition: border-color var(--transition-fast); }
+.catalog-search::placeholder { color: var(--color-text-muted); }
+.catalog-search:focus { border-color: var(--color-accent); }
+.catalog-count { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 20px; }
+.catalog-empty { text-align: center; padding: 80px 0; color: var(--color-text-secondary); }

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "nombre": "Camiseta Oversized Negra",
+    "descripcion": "Camiseta oversized de algodón premium con corte relajado. Perfecta para un look urbano y moderno.",
+    "precio": 89000,
+    "categoria": "Camisetas",
+    "imagen": "/uploads/camiseta-negra.webp",
+    "destacado": true,
+    "tallas": ["S", "M", "L", "XL"],
+    "stock": 25
+  },
+  {
+    "id": "2",
+    "nombre": "Hoodie Essential Gris",
+    "descripcion": "Hoodie de felpa francesa con capucha ajustable y bolsillo canguro. Comodidad y estilo en una sola prenda.",
+    "precio": 145000,
+    "categoria": "Hoodies",
+    "imagen": "/uploads/hoodie-gris.webp",
+    "destacado": true,
+    "tallas": ["S", "M", "L", "XL"],
+    "stock": 18
+  },
+  {
+    "id": "3",
+    "nombre": "Pantalón Cargo Beige",
+    "descripcion": "Pantalón cargo con múltiples bolsillos y corte slim. Confeccionado en tela resistente de alta calidad.",
+    "precio": 120000,
+    "categoria": "Pantalones",
+    "imagen": "/uploads/pantalon-cargo.webp",
+    "destacado": true,
+    "tallas": ["28", "30", "32", "34", "36"],
+    "stock": 15
+  },
+  {
+    "id": "4",
+    "nombre": "Chaqueta Bomber Negra",
+    "descripcion": "Chaqueta bomber con forro interior satinado y cierre metálico premium. Un clásico reinventado.",
+    "precio": 210000,
+    "categoria": "Chaquetas",
+    "imagen": "/uploads/bomber-negra.webp",
+    "destacado": true,
+    "tallas": ["S", "M", "L", "XL"],
+    "stock": 10
+  },
+  {
+    "id": "5",
+    "nombre": "Camiseta Blanca Minimal",
+    "descripcion": "Camiseta de corte regular en algodón orgánico. Diseño minimalista con logo bordado en el pecho.",
+    "precio": 75000,
+    "categoria": "Camisetas",
+    "imagen": "/uploads/camiseta-blanca.webp",
+    "destacado": false,
+    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "stock": 30
+  },
+  {
+    "id": "6",
+    "nombre": "Jogger Negro Premium",
+    "descripcion": "Jogger de felpa con puños elásticos y cordón ajustable. Ideal para un estilo streetwear elevado.",
+    "precio": 110000,
+    "categoria": "Pantalones",
+    "imagen": "/uploads/jogger-negro.webp",
+    "destacado": false,
+    "tallas": ["S", "M", "L", "XL"],
+    "stock": 20
+  },
+  {
+    "id": "7",
+    "nombre": "Hoodie Oversize Negra",
+    "descripcion": "Hoodie oversize con estampado trasero exclusivo. Tela gruesa de 400gsm para máxima calidad.",
+    "precio": 165000,
+    "categoria": "Hoodies",
+    "imagen": "/uploads/hoodie-negra.webp",
+    "destacado": true,
+    "tallas": ["M", "L", "XL"],
+    "stock": 12
+  },
+  {
+    "id": "8",
+    "nombre": "Gorra Snapback NUXELIT",
+    "descripcion": "Gorra snapback con logo NUXELIT bordado en 3D. Ajuste perfecto con cierre trasero metálico.",
+    "precio": 55000,
+    "categoria": "Accesorios",
+    "imagen": "/uploads/gorra-snapback.webp",
+    "destacado": false,
+    "tallas": ["Única"],
+    "stock": 40
+  }
+]
