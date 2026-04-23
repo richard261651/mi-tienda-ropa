@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Admin.css';
 
-const API_URL = 'http://localhost:3001';
+const API_URL = 'https://mi-tienda-ropa-1.onrender.com';
 
 export default function Admin() {
   const [products, setProducts] = useState([]);

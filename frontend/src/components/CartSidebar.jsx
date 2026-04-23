@@ -1,7 +1,7 @@
 import { useCart } from '../context/CartContext';
 import './CartSidebar.css';
 
-const API_URL = 'http://localhost:3001';
+const API_URL = 'https://mi-tienda-ropa-1.onrender.com';
 
 export default function CartSidebar() {
   const { cart, isCartOpen, setIsCartOpen, removeFromCart, updateQuantity, getTotal, clearCart } = useCart();

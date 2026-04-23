@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useCart } from '../context/CartContext';
 import './ProductCard.css';
 
-const API_URL = 'http://localhost:3001';
+const API_URL = 'https://mi-tienda-ropa-1.onrender.com';
 
 export default function ProductCard({ product }) {
   const { addToCart } = useCart();

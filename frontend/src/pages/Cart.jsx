@@ -2,7 +2,7 @@ import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import './Cart.css';
 
-const API_URL = 'http://localhost:3001';
+const API_URL = 'https://mi-tienda-ropa-1.onrender.com';
 
 export default function Cart() {
   const { cart, removeFromCart, updateQuantity, getTotal, clearCart } = useCart();

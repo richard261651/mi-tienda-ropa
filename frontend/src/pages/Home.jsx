@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import './Home.css';
 
-const API_URL = 'http://localhost:3001';
+const API_URL = 'https://mi-tienda-ropa-1.onrender.com';
 
 export default function Home() {
   const [featured, setFeatured] = useState([]);

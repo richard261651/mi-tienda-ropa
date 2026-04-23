@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
 import './Catalog.css';
 
-const API_URL = 'http://localhost:3001';
+const API_URL = 'https://mi-tienda-ropa-1.onrender.com';
 const CATEGORIAS = ['Todas', 'Camisetas', 'Hoodies', 'Pantalones', 'Chaquetas', 'Accesorios'];
 
 export default function Catalog() {
