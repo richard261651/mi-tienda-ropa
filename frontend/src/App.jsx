@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import Admin from './pages/Admin';
 import Checkout from './pages/Checkout';
 import './App.css';
+import Login from './pages/Login';
 
 export default function App() {
   return (
@@ -24,10 +25,13 @@ export default function App() {
           <Route path="/nosotros" element={<About />} />
           <Route path="/carrito" element={<Cart />} />
           <Route path="/contacto" element={<Contact />} />
-          <Route path="/admin" element={<Admin />} /><Route path="/checkout" element={<Checkout />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/login" element={<Login />} /><Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </CartProvider>
     </BrowserRouter>
   );
 }
+
+
