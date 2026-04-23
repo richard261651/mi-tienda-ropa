@@ -16,7 +16,7 @@ export default function Cart() {
       <section className="section"><div className="container">
         {cart.length === 0 ? (
           <div className="cart-page__empty">
-            <span style={{fontSize:'4rem'}}>🛒</span>
+            <span style={{ fontSize: '4rem' }}>🛒</span>
             <h2>Tu carrito está vacío</h2>
             <p>Explora nuestro catálogo y encuentra algo que te encante</p>
             <Link to="/catalogo" className="btn btn-primary">Ver Catálogo</Link>
@@ -52,8 +52,8 @@ export default function Cart() {
               <div className="cart-page__summary-row"><span>Subtotal</span><span>{formatPrice(getTotal())}</span></div>
               <div className="cart-page__summary-row"><span>Envío</span><span>Gratis</span></div>
               <div className="cart-page__summary-total"><span>Total</span><span>{formatPrice(getTotal())}</span></div>
-              <button className="btn btn-primary" style={{width:'100%'}}>Proceder al Pago</button>
-              <button className="btn btn-ghost" onClick={clearCart} style={{width:'100%'}}>Vaciar Carrito</button>
+              <button className="btn btn-primary" style={{ width: '100%' }}>Proceder al Pago</button>
+              <button className="btn btn-ghost" onClick={clearCart} style={{ width: '100%' }}>Vaciar Carrito</button>
             </div>
           </div>
         )}

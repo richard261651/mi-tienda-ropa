@@ -15,7 +15,7 @@ export default function Catalog() {
     fetch(`${API_URL}/api/products`)
       .then(r => r.json())
       .then(data => { setProducts(data); setFiltered(data); })
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   useEffect(() => {
