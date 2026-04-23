@@ -9,7 +9,7 @@ export default function Checkout() {
   const formatPrice = (p) => new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0 }).format(p);
 
   const resumen = cart.map(i => `${i.cantidad}x ${i.nombre} (${i.talla})`).join(', ');
-  const mensaje = encodeURIComponent(`Hola! Quiero pagar mi pedido NUXELIT:\n${resumen}\nTotal: ${formatPrice(total)}`);
+  const mensaje = encodeURIComponent(`Hola! Quiero pagar mi pedido ROPITA:\n${resumen}\nTotal: ${formatPrice(total)}`);
   const whatsappLink = `https://wa.me/573147535514?text=${mensaje}`;
   const wompiLink = 'https://checkout.wompi.co/l/test_VPOS_fwsA1Q';
 

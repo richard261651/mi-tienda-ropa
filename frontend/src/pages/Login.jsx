@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const ADMIN_USER = 'admin';
-const ADMIN_PASS = 'nuxelit2026';
+const ADMIN_PASS = 'ROPITA2026';
 
 export default function Login() {
   const [user, setUser] = useState('');
@@ -27,7 +27,7 @@ export default function Login() {
         <input className="login-input" type="text" placeholder="Usuario" value={user} onChange={e => setUser(e.target.value)} />
         <input className="login-input" type="password" placeholder="Contraseña" value={pass} onChange={e => setPass(e.target.value)} />
         {error && <p className="login-error">{error}</p>}
-        <button className="btn btn-primary" style={{width:'100%'}} onClick={handleLogin}>Entrar</button>
+        <button className="btn btn-primary" style={{ width: '100%' }} onClick={handleLogin}>Entrar</button>
       </div>
     </main>
   );

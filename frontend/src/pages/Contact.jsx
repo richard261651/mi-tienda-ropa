@@ -44,7 +44,7 @@ export default function Contact() {
             </div>
             <div className="contact-info__item">
               <h4>📧 Email</h4>
-              <p>hola@nuxelit.com</p>
+              <p>hola@ROPITA.com</p>
             </div>
             <div className="contact-info__item">
               <h4>📱 WhatsApp</h4>

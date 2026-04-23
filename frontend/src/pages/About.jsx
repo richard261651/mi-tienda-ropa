@@ -40,7 +40,7 @@ export default function About() {
         <div className="container">
           <div className="about-mission__inner">
             <h2>Nuestra <span className="accent-text">Misión</span></h2>
-            <p>Crear ropa que empodere. Que cada persona que use NUXELIT sienta que está expresando su verdadera esencia. No seguimos tendencias, las creamos.</p>
+            <p>Crear ropa que empodere. Que cada persona que use ROPITA sienta que está expresando su verdadera esencia. No seguimos tendencias, las creamos.</p>
           </div>
         </div>
       </section>

@@ -1,5 +1,5 @@
 /* ========================================
-   NUXELIT — Design System
+   ROPITA — Design System
    ======================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
@@ -34,10 +34,10 @@
   --radius-lg: 20px;
   --radius-full: 9999px;
 
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
-  --shadow-md: 0 4px 20px rgba(0,0,0,0.4);
-  --shadow-lg: 0 8px 40px rgba(0,0,0,0.5);
-  --shadow-glow: 0 0 20px rgba(201,169,110,0.15);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(201, 169, 110, 0.15);
 
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;
@@ -48,7 +48,9 @@
 }
 
 /* --- Reset --- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -87,11 +89,14 @@ img {
   display: block;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   font-family: var(--font-body);
   outline: none;
   border: none;
@@ -182,6 +187,7 @@ input, textarea, select {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -189,8 +195,13 @@ input, textarea, select {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideInRight {
@@ -198,6 +209,7 @@ input, textarea, select {
     opacity: 0;
     transform: translateX(100%);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -209,6 +221,7 @@ input, textarea, select {
     opacity: 1;
     transform: translateX(0);
   }
+
   to {
     opacity: 0;
     transform: translateX(100%);
@@ -216,13 +229,25 @@ input, textarea, select {
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 .animate-fade-in-up {
@@ -270,9 +295,11 @@ input, textarea, select {
   .section {
     padding: 48px 0;
   }
+
   .section-title {
     font-size: 1.8rem;
   }
+
   .container {
     padding: 0 16px;
   }

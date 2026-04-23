@@ -1,9 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-require('dotenv').config();
-const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI).then(() => console.log('MongoDB conectado')).catch(err => console.error('Error MongoDB:', err));
+require('dotenv').config(); const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log('MongoDB conectado'))
+  .catch(err => console.error('Error MongoDB:', err));
 
 const productRoutes = require('./routes/products');
 
@@ -27,7 +28,7 @@ app.use('/api/products', productRoutes);
 // Health check
 app.get('/', (req, res) => {
   res.json({
-    message: 'NUXELIT API funcionando correctamente',
+    message: 'ROPITA API funcionando correctamente',
     version: '1.0.0',
     endpoints: {
       products: '/api/products',
@@ -44,7 +45,6 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 NUXELIT API corriendo en http://localhost:${PORT}`);
-  console.log(`📦 Productos: http://localhost:${PORT}/api/products`);
+  console.log(`🚀 ROPITA API corriendo en http://localhost:${PORT}`);
+  console.log(`📦 Productos: http://:${PORT}/api/products`);
 });
-

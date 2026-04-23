@@ -81,7 +81,7 @@ export default function Home() {
           <div className="brand-story__text">
             <p className="brand-story__label">Nuestra Filosofía</p>
             <h2 className="brand-story__title">Ropa Que Habla<br />Por Ti</h2>
-            <p className="brand-story__desc">En NUXELIT creemos que la ropa es una extensión de tu personalidad. Cada pieza está diseñada con atención al detalle, materiales de primera calidad y un enfoque en la comodidad sin sacrificar el estilo.</p>
+            <p className="brand-story__desc">En ROPITA creemos que la ropa es una extensión de tu personalidad. Cada pieza está diseñada con atención al detalle, materiales de primera calidad y un enfoque en la comodidad sin sacrificar el estilo.</p>
             <Link to="/nosotros" className="btn btn-primary">Conoce Más</Link>
           </div>
           <div className="brand-story__visual">

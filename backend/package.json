@@ -1,7 +1,7 @@
 {
-  "name": "nuxelit-backend",
+  "name": "ROPITA-backend",
   "version": "1.0.0",
-  "description": "NUXELIT Clothing Brand - Backend API",
+  "description": "ROPITA Clothing Brand - Backend API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

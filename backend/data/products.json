@@ -7,7 +7,12 @@
     "categoria": "Camisetas",
     "imagen": "/uploads/camiseta-negra.webp",
     "destacado": true,
-    "tallas": ["S", "M", "L", "XL"],
+    "tallas": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
     "stock": 25
   },
   {
@@ -18,7 +23,12 @@
     "categoria": "Hoodies",
     "imagen": "/uploads/hoodie-gris.webp",
     "destacado": true,
-    "tallas": ["S", "M", "L", "XL"],
+    "tallas": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
     "stock": 18
   },
   {
@@ -29,7 +39,13 @@
     "categoria": "Pantalones",
     "imagen": "/uploads/pantalon-cargo.webp",
     "destacado": true,
-    "tallas": ["28", "30", "32", "34", "36"],
+    "tallas": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
     "stock": 15
   },
   {
@@ -40,7 +56,12 @@
     "categoria": "Chaquetas",
     "imagen": "/uploads/bomber-negra.webp",
     "destacado": true,
-    "tallas": ["S", "M", "L", "XL"],
+    "tallas": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
     "stock": 10
   },
   {
@@ -51,7 +72,13 @@
     "categoria": "Camisetas",
     "imagen": "/uploads/camiseta-blanca.webp",
     "destacado": false,
-    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "tallas": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "stock": 30
   },
   {
@@ -62,7 +89,12 @@
     "categoria": "Pantalones",
     "imagen": "/uploads/jogger-negro.webp",
     "destacado": false,
-    "tallas": ["S", "M", "L", "XL"],
+    "tallas": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
     "stock": 20
   },
   {
@@ -73,18 +105,24 @@
     "categoria": "Hoodies",
     "imagen": "/uploads/hoodie-negra.webp",
     "destacado": true,
-    "tallas": ["M", "L", "XL"],
+    "tallas": [
+      "M",
+      "L",
+      "XL"
+    ],
     "stock": 12
   },
   {
     "id": "8",
-    "nombre": "Gorra Snapback NUXELIT",
-    "descripcion": "Gorra snapback con logo NUXELIT bordado en 3D. Ajuste perfecto con cierre trasero metálico.",
+    "nombre": "Gorra Snapback ROPITA",
+    "descripcion": "Gorra snapback con logo ROPITA bordado en 3D. Ajuste perfecto con cierre trasero metálico.",
     "precio": 55000,
     "categoria": "Accesorios",
     "imagen": "/uploads/gorra-snapback.webp",
     "destacado": false,
-    "tallas": ["Única"],
+    "tallas": [
+      "Única"
+    ],
     "stock": 40
   }
 ]

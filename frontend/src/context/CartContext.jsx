@@ -9,7 +9,7 @@ export function useCart() {
 export function CartProvider({ children }) {
   const [cart, setCart] = useState(() => {
     try {
-      const saved = localStorage.getItem('nuxelit-cart');
+      const saved = localStorage.getItem('ROPITA-cart');
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];
@@ -19,7 +19,7 @@ export function CartProvider({ children }) {
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem('nuxelit-cart', JSON.stringify(cart));
+    localStorage.setItem('ROPITA-cart', JSON.stringify(cart));
   }, [cart]);
 
   const addToCart = (product, talla = 'M') => {
